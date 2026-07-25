@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ### 1. Log File Placement
 Before running the analyzer, you need to provide the raw infrastructure log file:
 * **Filename:** The file must be named strictly **`raw_request.csv`**.
-* **Location:** Place the `raw_request.csv` file directly into the **root directory** of the project (the same folder where `metronome_core.py` is located).
+* **Location:** Place the `raw_request.csv` file directly into the **root directory** of the project (the same folder where `bot_detector.py` is located).
 * **Data Schema:** The CSV file can be extracted from your API Gateway, Reverse Proxy (Nginx/Envoy), or SIEM system logs. It must include at least the following 5 columns (case-sensitive):
   * `userId` — Unique identifier of the authenticated user or session account.
   * `RequestId` — Unique transactional token assigned to each specific HTTP request event.
@@ -52,7 +52,7 @@ Before running the analyzer, you need to provide the raw infrastructure log file
 ### 2. Execution
 Run the main evaluation script from your terminal:
 ```bash
-python metronome_core.py
+python bot_detector.py
 ```
 
 ### 3. Reviewing Deliverables
